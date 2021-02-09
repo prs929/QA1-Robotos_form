@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary        
+Documentation    Ici un simple test de fonctionnement - Synchro
 
 *** Test Cases ***
 #TC_01_Login
@@ -46,7 +47,11 @@ TC_03_Login
     Input Password    xpath=//input[@id='txtPassword']    admin123    
     Click Button    //input[@id='btnLogin']  
    
-    Wait Until Page Contains    Dashboard    
+    Wait Until Page Contains    Dashboard   
+    
+TC_05_Login
+    Log To Console    Yo!    
+
 
     
 
