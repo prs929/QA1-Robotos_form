@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210208 23:20:12.790" rpa="false">
+<suite id="s1" name="Test 1" source="C:\Users\casa8\eclipse-workspace\Q1_c05_\TestCases\Test_1.robot">
+<test id="s1-t1" name="TC_03_Login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20210208 23:20:13.145" level="INFO">Opening browser 'ff' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<msg timestamp="20210208 23:20:13.148" level="INFO">Firefox driver log is always forced to to: C:\Users\casa8\eclipse-workspace\Q1_c05_\geckodriver-18.log</msg>
+<status status="PASS" starttime="20210208 23:20:13.144" endtime="20210208 23:20:23.918"></status>
+</kw>
+<kw name="Get Selenium Timeout" library="SeleniumLibrary">
+<doc>Gets the timeout that is used by various keywords.</doc>
+<assign>
+<var>${timeout}</var>
+</assign>
+<msg timestamp="20210208 23:20:23.942" level="INFO">${timeout} = 5 seconds</msg>
+<status status="PASS" starttime="20210208 23:20:23.940" endtime="20210208 23:20:23.942"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20210208 23:20:23.950" endtime="20210208 23:20:23.974"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210208 23:20:23.975" endtime="20210208 23:20:23.983"></status>
+</kw>
+<kw name="Get Selenium Timeout" library="SeleniumLibrary">
+<doc>Gets the timeout that is used by various keywords.</doc>
+<assign>
+<var>${timeout}</var>
+</assign>
+<msg timestamp="20210208 23:20:23.988" level="INFO">${timeout} = 20 seconds</msg>
+<status status="PASS" starttime="20210208 23:20:23.988" endtime="20210208 23:20:23.988"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20210208 23:20:23.989" endtime="20210208 23:20:23.990"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='txtUsername']</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210208 23:20:23.991" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@id='txtUsername']'.</msg>
+<status status="PASS" starttime="20210208 23:20:23.991" endtime="20210208 23:20:24.105"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='txtPassword']</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210208 23:20:24.123" level="INFO">Typing password into text field 'xpath=//input[@id='txtPassword']'.</msg>
+<msg timestamp="20210208 23:20:24.134" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210208 23:20:24.159" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210208 23:20:24.123" endtime="20210208 23:20:24.159"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20210208 23:20:24.171" level="INFO">Clicking button '//input[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20210208 23:20:24.170" endtime="20210208 23:20:25.499"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Dashboard000</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210208 23:20:45.805" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210208 23:20:45.689" endtime="20210208 23:20:45.805"></status>
+</kw>
+<msg timestamp="20210208 23:20:45.807" level="FAIL">Text 'Dashboard000' did not appear in 20 seconds.</msg>
+<status status="FAIL" starttime="20210208 23:20:25.536" endtime="20210208 23:20:45.807"></status>
+</kw>
+<status status="FAIL" starttime="20210208 23:20:13.143" endtime="20210208 23:20:45.808" critical="yes">Text 'Dashboard000' did not appear in 20 seconds.</status>
+</test>
+<status status="FAIL" starttime="20210208 23:20:12.792" endtime="20210208 23:20:45.809"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test 1">Test 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
